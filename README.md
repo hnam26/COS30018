@@ -10,10 +10,10 @@ In this project, we fine-tune generative AI models for the task of Machine Readi
 
 | Finetuned Model                    | MASHQA Exact match | MASHQA F1 Score | COVID Exact match | COVID F1 Score |
 | ---------------------------------- | ------------------ | --------------- | ----------------- | -------------- |
-| google-bert/bert-base-cased        | 21.19              | 56.99           | 17.12             | 48.67          |
-| google-bert/bert-base-uncased      | 23.11              | 55.98           | 12.06             | 39.53          |
-| distilbert/distilbert-base-cased   |                    |                 |                   |                |
-| distilbert/distilbert-base-uncased |                    |                 |                   |                |
+| google-bert/bert-base-cased        | 21.19              | **56.99**       | **17.12**         | **48.67**      |
+| google-bert/bert-base-uncased      | **23.11**          | 55.98           | 12.06             | 39.53          |
+| distilbert/distilbert-base-cased   | 18.28              | 53.92           | 12.45             | 43.88          |
+| distilbert/distilbert-base-uncased | 21.50              | 55.15           | 6.61              | 37.82          |
 
 ## Model Fine-tuning and Validation
 
@@ -29,4 +29,4 @@ This project is a collaborative effort by a group of contributors. The team memb
 
 ## License
 
-(If applicable, include information about the project's license)
+This project is licensed under the MIT License.
