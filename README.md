@@ -6,6 +6,56 @@ This project is part of the COS30018 course. It focuses on Machine Reading Compr
 
 In this project, we fine-tune generative AI models for the task of Machine Reading Comprehension. The models are trained to understand and generate responses to text inputs, simulating a deep understanding of the text.
 
+## Installation
+
+Before running the program, ensure that you have Python installed on your system. Then, follow these steps to set up a virtual environment and install the necessary packages:
+
+1. Create a virtual environment:
+
+```
+python -m venv venv
+```
+
+2. Activate the virtual environment:
+
+- On Windows:
+
+```
+.\venv\Scripts\activate
+```
+
+- On macOS and Linux:
+
+```
+source venv/bin/activate
+```
+
+3. Install the required packages:
+
+```
+pip install -r requirements.txt
+```
+
+4. Configure your environment variables. You'll need to create a `.env` file in the root directory of the project. This file should contain your Huggingface and Weights & Biases API keys. Use the provided `.env.example` file as a template for what your `.env` file should look like.
+
+5. Run the main script with the appropriate arguments.
+
+- --train_data: Path to the training data file.
+
+- --validation_data: Path to the validation data file.
+
+- --test_data: List of paths to the test data files. You can provide multiple test data files by separating the paths with spaces.
+
+- --model_id: ID of the model you want to fine-tune. You can find other model IDs on the Huggingface Model Hub.
+
+- --output_dir: Path to the directory where you want to save the trained model and its outputs.
+
+Exmaple:
+
+```bash
+python main.py --train_data ./data/dataset_train.csv --validation_data ./data/dataset_val.csv --test_data ./data/dataset_test_covid ./data/dataset_test_mash --model_id bert-base-uncased --output_dir output
+```
+
 ## Result
 
 | Finetuned Model                    | MASHQA Exact match | MASHQA F1 Score | COVID Exact match | COVID F1 Score |
