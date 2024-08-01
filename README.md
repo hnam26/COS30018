@@ -40,20 +40,22 @@ pip install -r requirements.txt
 
 5. Run the main script with the appropriate arguments.
 
-- --train_data: Path to the training data file.
+- `--train`: List of paths to the train data files. You can provide multiple files by separating the paths with spaces.
 
-- --validation_data: Path to the validation data file.
+- `--val`: List of paths to the validation data files. You can provide multiple files by separating the paths with spaces.
 
-- --test_data: List of paths to the test data files. You can provide multiple test data files by separating the paths with spaces.
+- `--test`: List of paths to the test data files. You can provide multiple files by separating the paths with spaces.
 
-- --model_id: ID of the model you want to fine-tune. You can find other model IDs on the Huggingface Model Hub.
+- `--model_id`: ID of the model you want to fine-tune. You can find other model IDs on the Huggingface Model Hub.
 
-- --output_dir: Path to the directory where you want to save the trained model and its outputs.
+- `--output_dir`: Path to the directory where you want to save the trained model and its outputs.
+
+**Note: for the input files, please put them into the _data/_ folder. All train, validation and test files must follow SQUAD template json file.**
 
 Exmaple:
 
 ```bash
-python main.py --train_data ./data/dataset_train.csv --validation_data ./data/dataset_val.csv --test_data ./data/dataset_test_covid ./data/dataset_test_mash --model_id bert-base-uncased --output_dir output
+python main.py --train train_covid.json train_mash.json --val val_mash.json val_covid.json --test test_mash.json test_covid.json --model_id bert-base-uncased --output_dir output
 ```
 
 ## Result
