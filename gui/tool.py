@@ -15,7 +15,8 @@ def query(question, context):
         'context': context,
         'question': question,
     },
-    max_answer_len=50,
+    max_answer_len=128,
+    max_question_len=2048,
     )
     return answer
 	
