@@ -75,6 +75,12 @@ The models used in this project have been fine-tuned and validated to ensure hig
 
 A demo of the project is available at [https://cos30018-llm.streamlit.app](https://cos30018-llm.streamlit.app/). The demo showcases the capabilities of the fine-tuned models, allowing users to interact with the models and see their responses in real-time.
 
+You can deploy our model on your local host by running:
+
+```
+streamlit run gui/app.py
+```
+
 ## Contributing
 
 This project is a collaborative effort by a group of contributors. The team members, Hoai Nam, Quang Thien, Thanh Minh, Xuan Sinh, and Minh Long, have all made significant contributions to the project.
