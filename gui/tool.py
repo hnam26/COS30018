@@ -28,4 +28,5 @@ def stream_data(response):
 
 
 def get_response(question, context):
+    print(query(question, context))
     return query(question, context)['answer']
